@@ -1,0 +1,12 @@
+/* TEAM */
+Your title: Oliver Kiessler
+Site: https://oliver-kiessler.de
+Twitter: @okiess
+Instagram: okiess
+Location: Cologne, Germany
+
+/* SITE */
+Last update: 2025/08/03
+Standards: HTML5
+Components: Ruby on Rails 8
+Software: VS Code
