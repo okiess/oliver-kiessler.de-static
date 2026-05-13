@@ -1324,9 +1324,19 @@
 
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;">
-    <div><a href="https://oliver-kiessler.de" style="margin-left:0;">Oliver Kießler</a></div>
+    <div><a href="https://oliver-kiessler.de" style="margin-left:0;" rel="me">Oliver Kießler</a></div>
     <div>
-      <a href="mailto:mail@oliver-kiessler.de">Kontakt</a>
+			<script type="text/javascript">
+  			var CodedArray=[109, 97, 105, 108, 64, 111, 108, 105, 118, 101, 114, 45, 107, 105, 101, 115, 115, 108, 101, 114, 46, 100, 101];
+  			var encryptedEmail=''
+  			for (var i=0; i<CodedArray.length; i++)
+  			encryptedEmail += String.fromCharCode(CodedArray[i])
+  			document.write('<a href="mailto:')
+  			document.write(encryptedEmail)
+  			document.write('">')
+  			document.write('Kontakt')
+  			document.write('</a>')
+			</script>
       <a href="https://oliver-kiessler.de/de/impressum.html">Impressum</a>
       <a href="https://oliver-kiessler.de/de/datenschutz.html">Datenschutzerklärung</a>
     </div>
