@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary Meta Tags -->
+<title>KI Agentic Coding Schulung mit coder — für Solo-Entwickler &amp; Freelancer</title>
+<meta name="title" content="KI Agentic Coding Schulung mit coder — für Solo-Entwickler & Freelancer">
+<meta name="description" content="Lerne Agentic Coding am Beispiel von coder: einer lokalen Pipeline aus vier KI-Agenten (Importer, Planner, Coder, Reviewer). Persönliche Schulung inklusive Software. Für Solo-Entwickler und Freelancer.">
+<meta name="keywords" content="Agentic Coding, KI Coding Agent, AI Pair Programming, Multi-Agent Workflow, KI Schulung Entwickler, Solo-Entwickler KI, Freelancer KI Coding, AGENTS.md, pi-agent, opencode, lokales KI Coding, KI Agenten Pipeline">
+<meta name="author" content="Oliver Kießler">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="language" content="de">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://oliver-kiessler.de/de/ki-agentic-coding-schulung-mit-coder.html">
+
+<!-- Open Graph / Facebook / LinkedIn -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://oliver-kiessler.de/de/ki-agentic-coding-schulung-mit-coder.html">
+<meta property="og:site_name" content="Oliver Kießler">
+<meta property="og:title" content="KI Agentic Coding Schulung mit coder — für Solo-Entwickler &amp; Freelancer">
+<meta property="og:description" content="Lerne Agentic Coding am Beispiel von coder: einer lokalen Pipeline aus vier KI-Agenten. Persönliche Schulung inklusive Software. Für Solo-Entwickler und Freelancer.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="coder — KI Agentic Coding Pipeline mit Importer, Planner, Coder und Reviewer">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://oliver-kiessler.de/de/ki-agentic-coding-schulung-mit-coder.html">
+<meta name="twitter:title" content="KI Agentic Coding Schulung mit coder">
+<meta name="twitter:description" content="Lerne Agentic Coding am Beispiel von coder: einer lokalen Pipeline aus vier KI-Agenten. Persönliche Schulung inklusive Software.">
+<meta name="twitter:image:alt" content="coder — KI Agentic Coding Pipeline">
+
+<!-- Theme & Favicon -->
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232563eb'/%3E%3Ctext x='50' y='68' font-family='ui-monospace,monospace' font-size='60' font-weight='bold' text-anchor='middle' fill='white'%3E%3E%3C/text%3E%3C/svg%3E">
+
+<!-- Structured Data: SoftwareApplication + Course + Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "coder",
+      "description": "Lokale Pipeline aus vier KI-Agenten (Importer, Planner, Coder, Reviewer) für Agentic Coding auf dem eigenen Rechner. Aus GitHub-/GitLab-Issues oder Markdown-Tasks entstehen getestete Feature-Branches.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Linux",
+      "url": "https://oliver-kiessler.de/de/ki-agentic-coding-schulung-mit-coder.html",
+      "author": {
+        "@type": "Person",
+        "name": "Oliver Kießler",
+        "url": "https://oliver-kiessler.de"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "490",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "490",
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": false
+        },
+        "description": "Komplettpaket: Schulung inklusive Software, ab 490 € netto"
+      }
+    },
+    {
+      "@type": "Course",
+      "name": "KI Agentic Coding Schulung mit coder",
+      "description": "Persönliche Remote-Schulung zur Integration von Agentic Coding in eigene Projekte. Inhalte: Funktionsweise einer Multi-Agent-Pipeline, Aufbau und Konfiguration der AGENTS.md, erste produktive Tasks im eigenen Stack.",
+      "provider": {
+        "@type": "Person",
+        "name": "Oliver Kießler",
+        "url": "https://oliver-kiessler.de"
+      },
+      "educationalLevel": "Professional",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Solo-Entwickler und Freelancer"
+      },
+      "teaches": "Agentic Coding, Multi-Agent-Workflows, AGENTS.md-Konfiguration, KI-Integration in Softwareentwicklung",
+      "url": "https://oliver-kiessler.de/de/ki-agentic-coding-schulung-mit-coder.html",
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseWorkload": "PT3H"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mergt am Ende eine KI in main?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In der Standard-Session nicht. Coder arbeitet ausschließlich auf Feature-Branches, Reviewer ist read-only. Den Merge nach main machst du selbst — oder du nutzt den optionalen Merger-Loop, der approvte Branches automatisch übernimmt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Warum gibt es die Software nicht zum Download?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das eigentliche Know-how steckt nicht im Tool, sondern in der AGENTS.md. Sie definiert, wie die vier Agenten dein Projekt verstehen — und schlecht geschrieben produziert sie keinen optimalen Code. coder gibt es deshalb nur in Verbindung mit der Schulung. Danach kannst du es zeitlich unbegrenzt nutzen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche KI-Modelle werden unterstützt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "coder läuft auf pi-agent oder opencode. Pro Agent konfigurierbar — der Planner kann ein anderes Modell nutzen als der Coder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funktioniert das mit jedem Stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solange Build und Tests per Shell-Befehl ausführbar sind, ja. Getestet mit Node, Python, Go, Rust und Java. coder ist nicht an eine Sprache gebunden, aber die AGENTS.md muss zum jeweiligen Stack passen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn der Reviewer einen Branch ablehnt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Plan geht zurück an den Planner mit Feedback, oder du greifst manuell ein. Du entscheidest, wie oft eine Schleife laufen darf, bevor menschliche Aufmerksamkeit nötig wird."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Oliver Kießler",
+      "jobTitle": "Senior Fullstack Software Entwickler",
+      "url": "https://oliver-kiessler.de",
+      "knowsAbout": ["Agentic Coding", "TypeScript", "Node.js", "Angular", "AWS", "Java", "KI-Integration", "Multi-Agent-Systeme"]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-elev: #fafafa;
+    --bg-card: #f5f5f5;
+    --border: #e8e8e8;
+    --border-strong: #d4d4d4;
+    --text: #0a0a0a;
+    --text-dim: #525252;
+    --text-faint: #a3a3a3;
+    --accent: #2563eb;
+    --accent-dim: #1d4ed8;
+    --accent-soft: #eff6ff;
+    --importer: #9333ea;
+    --planner: #0284c7;
+    --coder: #16a34a;
+    --reviewer: #d97706;
+    --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+    --serif: ui-serif, 'New York', 'Iowan Old Style', 'Apple Garamond', Cambria, 'Times New Roman', Times, serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 70% 20%, rgba(37, 99, 235, 0.05), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* NAV */
+  nav {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    z-index: 10;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .logo:hover { color: var(--accent); }
+  .logo::before {
+    content: '▸ ';
+    color: var(--accent);
+  }
+  .nav-meta {
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .nav-meta a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 16px;
+    transition: color 0.2s;
+  }
+  .nav-meta a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-strong);
+    border-radius: 2px;
+    background: var(--bg-elev);
+  }
+  .hero-tag .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+    max-width: 900px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .hero p.lead {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 620px;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--border-strong);
+    transition: all 0.2s;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .btn-primary:hover {
+    background: var(--accent-dim);
+    border-color: var(--accent-dim);
+    transform: translateY(-1px);
+  }
+  .btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .btn .arrow {
+    transition: transform 0.2s;
+  }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* TERMINAL */
+  .terminal {
+    margin: 80px 0 40px;
+    background: #0d0d0d;
+    border: 1px solid #1f1f1f;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.08);
+  }
+  .term-header {
+    background: #1a1a1a;
+    padding: 12px 16px;
+    border-bottom: 1px solid #262626;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .term-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #3a3a3a;
+  }
+  .term-title {
+    margin-left: 16px;
+    font-size: 12px;
+    color: #6a6a6a;
+  }
+  .term-body {
+    padding: 24px;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 280px;
+    color: #c8c8c8;
+  }
+  .term-line { display: block; }
+  .term-prompt { color: #4ade80; }
+  .term-comment { color: #6a6a6a; }
+  .term-output { color: #a8a8a8; padding-left: 16px; }
+  .term-output.importer { border-left: 2px solid #c084fc; }
+  .term-output.planner { border-left: 2px solid #7dd3fc; }
+  .term-output.coder { border-left: 2px solid #4ade80; }
+  .term-output.reviewer { border-left: 2px solid #fbbf24; }
+  .agent-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  .agent-tag.importer { background: rgba(192, 132, 252, 0.15); color: #c084fc; }
+  .agent-tag.planner { background: rgba(125, 211, 252, 0.15); color: #7dd3fc; }
+  .agent-tag.coder { background: rgba(74, 222, 128, 0.15); color: #4ade80; }
+  .agent-tag.reviewer { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: #4ade80;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  /* SECTION */
+  section { padding: 100px 0; position: relative; }
+  .section-label {
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .section-label::before {
+    content: '// ';
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    max-width: 800px;
+  }
+  h2 em { color: var(--accent); font-style: italic; }
+  .section-intro {
+    font-size: 16px;
+    color: var(--text-dim);
+    max-width: 600px;
+    margin-bottom: 60px;
+  }
+
+  /* AGENTS GRID */
+  .agents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .agent-card {
+    background: var(--bg);
+    padding: 40px;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .agent-card:hover { background: var(--bg-elev); }
+  .agent-num {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-bottom: 16px;
+  }
+  .agent-name {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .agent-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .agent-color.importer { background: var(--importer); }
+  .agent-color.planner { background: var(--planner); }
+  .agent-color.coder { background: var(--coder); }
+  .agent-color.reviewer { background: var(--reviewer); }
+  .agent-role {
+    font-size: 12px;
+    color: var(--text-faint);
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+  .agent-desc {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .agent-meta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  .agent-meta code {
+    color: var(--text-dim);
+    background: var(--bg-elev);
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  /* MERGE NOTE */
+  .merge-note {
+    margin-top: 40px;
+    padding: 28px 32px;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+  .merge-note-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .merge-note p {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 720px;
+  }
+  .merge-note strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* WORKFLOW */
+  .workflow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    counter-reset: step;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+  }
+  .step:last-child { border-bottom: 1px solid var(--border); }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--text-faint);
+    line-height: 1;
+  }
+  .step-content h3 {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .step-content p {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .step-code {
+    background: #0d0d0d;
+    border: 1px solid #1f1f1f;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #4ade80;
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .step-code::before {
+    content: '$ ';
+    color: #6a6a6a;
+  }
+
+  /* FEATURES */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  @media (max-width: 960px) {
+    .features { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .features { grid-template-columns: 1fr; }
+  }
+  .feature {
+    background: var(--bg);
+    padding: 32px;
+  }
+  .feature-icon {
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .feature h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .feature p {
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* TARGET */
+  .target {
+    background: var(--bg-elev);
+    border: 1px solid var(--border-strong);
+    padding: 60px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .target::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--accent);
+  }
+  .target h3 {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  .target p {
+    color: var(--text-dim);
+    font-size: 16px;
+    max-width: 600px;
+    line-height: 1.7;
+  }
+  .target ul {
+    list-style: none;
+    margin-top: 24px;
+  }
+  .target li {
+    color: var(--text-dim);
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 24px;
+    position: relative;
+  }
+  .target li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* FAQ */
+  .faq-item {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .faq-item:last-child { border-bottom: 1px solid var(--border); }
+  .faq-q {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .faq-a {
+    color: var(--text-dim);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 720px;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    text-align: center;
+    padding: 120px 0;
+    border-top: 1px solid var(--border);
+  }
+  .final-cta h2 {
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+  .final-cta p {
+    color: var(--text-dim);
+    margin-bottom: 40px;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta .cta-row { justify-content: center; }
+
+  /* IMPORT FLOW */
+  .import-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+  }
+  .flow-step {
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 24px;
+    min-width: 180px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .flow-step.center {
+    border-color: var(--accent);
+    background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 100%);
+  }
+  .flow-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--bg-elev);
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .flow-icon.task { color: var(--accent); background: var(--accent-soft); }
+  .flow-icon.pipeline { color: var(--text); background: var(--bg-elev); }
+  .flow-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 4px;
+    word-break: break-word;
+  }
+  .flow-meta {
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.05em;
+  }
+  .flow-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-faint);
+  }
+  .flow-cmd {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-dim);
+    background: var(--bg-card);
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+
+  .import-platforms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .platform {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 28px;
+  }
+  .platform-name {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .platform-cmd {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    background: #0d0d0d;
+    color: #4ade80;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .platform-cmd::before {
+    content: '$ ';
+    color: #6a6a6a;
+  }
+  .platform-desc {
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* PACKAGE CARD */
+  .package-card {
+    max-width: 880px;
+    margin: 60px auto 0;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    text-align: left;
+  }
+  .package-header {
+    background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg-elev) 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .package-label {
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .package-price-block {
+    text-align: right;
+  }
+  .package-price {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text);
+  }
+  .package-price-suffix {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-faint);
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+    margin-left: 4px;
+  }
+  .package-price-note {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+  .package-body {
+    padding: 40px;
+  }
+  .package-desc {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: none;
+  }
+  .package-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .package-col-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .pricing-list li {
+    color: var(--text-dim);
+    font-size: 13px;
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .pricing-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer a {
+    color: var(--text-dim);
+    text-decoration: none;
+    margin-left: 16px;
+  }
+  footer a:hover { color: var(--accent); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .container { padding: 0 20px; }
+    .hero { padding: 60px 0 40px; }
+    .agents { grid-template-columns: 1fr; }
+    .agent-card { padding: 28px; }
+    .target { padding: 32px; }
+    .step { grid-template-columns: 1fr; gap: 12px; }
+    .step-num { font-size: 40px; }
+    section { padding: 60px 0; }
+    .term-body { padding: 16px; font-size: 12px; }
+    .package-header { padding: 24px; }
+    .package-body { padding: 24px; }
+    .package-columns { grid-template-columns: 1fr; gap: 24px; }
+    .import-platforms { grid-template-columns: 1fr; gap: 16px; }
+    .import-flow { gap: 8px; }
+    .flow-step { min-width: unset; padding: 16px; flex: 1 1 100%; }
+    .flow-arrow svg { transform: rotate(90deg); }
+  }
+
+  /* REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Hauptnavigation">
+  <div class="container nav-inner">
+    <a href="https://oliver-kiessler.de" class="logo" aria-label="Zur Startseite von Oliver Kießler">coder</a>
+    <div class="nav-meta">
+      <a href="#workflow">Workflow</a>
+      <a href="#agents">Agenten</a>
+      <a href="#import">Integration</a>
+      <a href="#features">Features</a>
+      <a href="#beratung">Schulung</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">
+      <span class="dot"></span>
+      <span>Schulung für Solo-Entwickler &amp; Freelancer</span>
+    </div>
+    <h1>Jetzt endlich mit<br>KI <em>Agentic Coding</em><br>durchstarten.</h1>
+    <p class="lead">coder ist eine lokale Pipeline aus Importer, Planner, Coder und Reviewer. Aus einer Markdown-Aufgabe — oder direkt aus einem GitHub-/GitLab-Issue — entsteht ein getesteter Feature-Branch. Reviewen und mergen tust du selbst. In der Schulung zeige ich dir am Beispiel von coder, wie sich Agentic Coding sinnvoll in dein eigenes Projekt integrieren lässt.</p>
+    <div class="cta-row">
+      <a href="#beratung" class="btn btn-primary">
+        <span>Schulung anfragen</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#workflow" class="btn btn-ghost">
+        <span>Wie es funktioniert</span>
+      </a>
+    </div>
+
+    <div class="terminal">
+      <div class="term-header">
+        <div class="term-dot"></div>
+        <div class="term-dot"></div>
+        <div class="term-dot"></div>
+        <div class="term-title">tmux · coder-session</div>
+      </div>
+      <div class="term-body" id="terminal-body">
+        <span class="term-line"><span class="term-prompt">$</span> scripts/start.sh</span>
+        <span class="term-line">&nbsp;</span>
+        <span class="term-line term-output importer"><span class="agent-tag importer">IMPORTER</span>Pulled 3 issues from GitHub → docs/tasks/</span>
+        <span class="term-line term-output planner"><span class="agent-tag planner">PLANNER</span>Reading docs/tasks/142_auth.md...</span>
+        <span class="term-line term-output planner"><span class="agent-tag planner">PLANNER</span>Plan written to docs/plans/142_auth.md</span>
+        <span class="term-line term-output coder"><span class="agent-tag coder">CODER</span>Branch created: feature/142-auth</span>
+        <span class="term-line term-output coder"><span class="agent-tag coder">CODER</span>Implementing step 3/7: POST /auth/login</span>
+        <span class="term-line term-output reviewer"><span class="agent-tag reviewer">REVIEWER</span>Build: ok. Tests: 24/24 passed. Approved.<span class="cursor"></span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="container">
+    <div class="section-label">Das Problem</div>
+    <h2>Agentic Coding klingt gut.<br>Bis du es <em>selbst</em> aufsetzen musst.</h2>
+    <p class="section-intro">Du willst KI-Agenten nicht für Autocomplete nutzen, sondern für echte Feature-Arbeit. In den meisten Workflows läuft das so: du chattest, kopierst, prüfst, mergst manuell. Der Agent macht einen Teil, der Rest bleibt an dir hängen.</p>
+    <p class="section-intro">coder strukturiert diesen Prozess. Die Agenten produzieren einen Vorschlag, du behältst die Kontrolle über den Merge. Nicht magisch, aber konsistent.</p>
+  </div>
+</section>
+
+<section id="agents" style="background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Die Pipeline</div>
+    <h2>Vier Agenten.<br>Eine klare <em>Verantwortung</em> pro Schritt.</h2>
+    <p class="section-intro">Jeder Agent macht genau eine Sache. Kommunikation läuft über Markdown-Dateien, nicht über geteilten State. Das macht den Workflow inspizierbar und reproduzierbar.</p>
+
+    <div class="agents">
+      <div class="agent-card">
+        <div class="agent-num">01 / importer</div>
+        <div class="agent-name"><span class="agent-color importer"></span>Importer</div>
+        <div class="agent-role">Holt. Konvertiert. Legt ab.</div>
+        <p class="agent-desc">Pollt deinen Issue-Tracker (GitHub oder GitLab) und konvertiert offene Issues in Task-Dateien unter <code style="font-family:var(--mono);color:var(--text);">docs/tasks/</code>. Issue-Nummer und Titel werden im Dateinamen erhalten — keine doppelte Pflege.</p>
+        <div class="agent-meta">Output → <code>docs/tasks/N_name.md</code></div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-num">02 / planner</div>
+        <div class="agent-name"><span class="agent-color planner"></span>Planner</div>
+        <div class="agent-role">Liest. Denkt. Schreibt.</div>
+        <p class="agent-desc">Holt sich die nächste Aufgabe aus <code style="font-family:var(--mono);color:var(--text);">docs/tasks/</code>, analysiert die Codebase und erstellt einen detaillierten, schrittweisen Implementierungsplan — inklusive konkreter Code-Vorschläge. Schreibt nicht in die Codebase, sondern legt den Plan als Markdown ab.</p>
+        <div class="agent-meta">Output → <code>docs/plans/N_name.md</code></div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-num">03 / coder</div>
+        <div class="agent-name"><span class="agent-color coder"></span>Coder</div>
+        <div class="agent-role">Branch. Implement. Commit.</div>
+        <p class="agent-desc">Erstellt einen isolierten Feature-Branch, arbeitet den Plan Schritt für Schritt ab und committet sauber. Am Ende markiert er den Plan als reviewable.</p>
+        <div class="agent-meta">Output → <code>feature/N-name</code></div>
+      </div>
+
+      <div class="agent-card">
+        <div class="agent-num">04 / reviewer</div>
+        <div class="agent-name"><span class="agent-color reviewer"></span>Reviewer</div>
+        <div class="agent-role">Checkt. Baut. Testet.</div>
+        <p class="agent-desc">Checkt den Branch aus, vergleicht den Diff gegen die Base-Branch, baut das Projekt und führt die Tests aus. Strikt read-only — er entscheidet, ändert aber keinen Code.</p>
+        <div class="agent-meta">Output → approved / failed</div>
+      </div>
+    </div>
+
+    <div class="merge-note">
+      <div class="merge-note-label">Und der Merge?</div>
+      <p>Der finale Merge in <code style="font-family:var(--mono);color:var(--text);">main</code> ist nicht Teil der Standard-Session. Sobald der Reviewer approved hat, mergst du selbst — oder du startest den optionalen <code style="font-family:var(--mono);color:var(--text);">merger.sh</code>-Loop, der approvte Branches automatisch in die Base-Branch übernimmt. So bleibt die Kontrolle bei dir.</p>
+    </div>
+  </div>
+</section>
+
+<section id="workflow">
+  <div class="container">
+    <div class="section-label">Workflow</div>
+    <h2>Vom Task zum Merge<br>in <em>fünf Schritten</em>.</h2>
+
+    <div class="workflow">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Setup (einmalig pro Repo)</h3>
+          <p>Klonen, ausführen, fertig. Das Setup-Skript legt die Verzeichnisstruktur an, kopiert die Loop-Skripte ins Projekt und installiert die Slash-Command-Prompts global.</p>
+          <div class="step-code">./setup.sh /pfad/zu/deinem-repo</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Aufgaben einspielen</h3>
+          <p>Entweder als Markdown-Datei in <code style="color:var(--accent);background:var(--accent-soft);padding:2px 6px;border-radius:3px;font-size:0.9em;">docs/tasks/</code> — oder du lässt den Importer Issues aus GitHub/GitLab ziehen. Ziel, Kontext, Akzeptanzkriterien. Keine 30-Seiten-Spec — der Planner füllt die Lücken.</p>
+          <div class="step-code">echo "## Ziel\nNeue API-Endpunkte..." &gt; docs/tasks/1_api-auth.md</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Pipeline starten</h3>
+          <p>Ein Befehl startet die tmux-Session mit allen vier Agenten — Importer, Planner, Coder, Reviewer. Jeder läuft in einem eigenen Pane, farblich markiert.</p>
+          <div class="step-code">scripts/start.sh</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Zuschauen, eingreifen wenn nötig</h3>
+          <p>Die vier Agenten arbeiten parallel in eigenen tmux-Panes: der Importer zieht offene Issues, der Planner erstellt einen Implementierungsplan, der Coder setzt ihn um, der Reviewer prüft das Ergebnis. Du verfolgst den Fortschritt live. In den meisten Fällen lässt du laufen — bei Bedarf hältst du die Session an und korrigierst Plan oder Prompt.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h3>Mergen — durch dich</h3>
+          <p>Sobald der Reviewer approved, ist der Branch fertig. Du mergst ihn selbst — per Pull Request oder Konsole. Wer mag, startet zusätzlich den optionalen Merger-Loop, der approvte Branches automatisch übernimmt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="import">
+  <div class="container">
+    <div class="section-label">Integration</div>
+    <h2>Aus deinem Backlog<br>direkt in die <em>Pipeline</em>.</h2>
+    <p class="section-intro">Du musst keine Tasks doppelt pflegen. Der Importer-Agent zieht Issues aus GitHub und GitLab und legt sie als Tasks in <code style="color:var(--accent);background:var(--accent-soft);padding:2px 6px;border-radius:3px;font-size:0.9em;">docs/tasks/</code> ab — bereit zur Bearbeitung durch Planner, Coder und Reviewer.</p>
+
+    <div class="import-flow">
+      <div class="flow-step">
+        <div class="flow-icon github">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </div>
+        <div class="flow-label">GitHub / GitLab Issue</div>
+        <div class="flow-meta">#142</div>
+      </div>
+
+      <div class="flow-arrow">
+        <span class="flow-cmd">importer-pane</span>
+        <svg viewBox="0 0 80 12" width="80" height="12" fill="none"><line x1="0" y1="6" x2="72" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="68,2 76,6 68,10" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      </div>
+
+      <div class="flow-step center">
+        <div class="flow-icon task">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
+        </div>
+        <div class="flow-label">docs/tasks/142_<wbr>name.md</div>
+        <div class="flow-meta">Task-Datei</div>
+      </div>
+
+      <div class="flow-arrow">
+        <span class="flow-cmd">planner → coder → reviewer</span>
+        <svg viewBox="0 0 80 12" width="80" height="12" fill="none"><line x1="0" y1="6" x2="72" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="68,2 76,6 68,10" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-icon pipeline">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="flow-label">Approved Feature-Branch</div>
+        <div class="flow-meta">bereit zum Merge</div>
+      </div>
+    </div>
+
+    <div class="import-platforms">
+      <div class="platform">
+        <div class="platform-name">GitHub</div>
+        <div class="platform-cmd">scripts/gh-import.sh</div>
+        <p class="platform-desc">Der Importer pollt offene Issues, optional gefiltert nach Label, Milestone oder Assignee. Issue-Beschreibung wird zur Task, Issue-Nummer bleibt im Dateinamen — so bleibt der Bezug zum Tracker erhalten.</p>
+      </div>
+      <div class="platform">
+        <div class="platform-name">GitLab</div>
+        <div class="platform-cmd">scripts/glab-import.sh</div>
+        <p class="platform-desc">Gleiche Logik für GitLab-Issues. Funktioniert mit gitlab.com und Self-Hosted-Instanzen. Authentifizierung über die offizielle GitLab-CLI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Unter der Haube</div>
+    <h2><em>Bewusst</em> einfach gehalten.</h2>
+    <p class="section-intro">Keine Cloud, kein Vendor-Lock für die Agenten selbst. coder läuft auf deinem Rechner. Die Architektur ist schlicht, damit du sie verstehen, debuggen und anpassen kannst. Für die KI-Modelle selbst brauchst du natürlich einen Anbieter deiner Wahl.</p>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">[fs]</div>
+        <h4>File-basierte Pipeline</h4>
+        <p>Agenten kommunizieren über Markdown in <code style="font-family:var(--mono);">docs/tasks/</code> und <code style="font-family:var(--mono);">docs/plans/</code>. Versionierbar, diffbar, debuggbar.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">[git]</div>
+        <h4>Git-Locking</h4>
+        <p><code style="font-family:var(--mono);">.locks/git.lock</code> serialisiert alle Git-Operationen, damit sich parallele Agenten nicht ins Gehege kommen.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">[branch]</div>
+        <h4>Feature-Branches</h4>
+        <p>Der Coder fasst <code style="font-family:var(--mono);">main</code> nie an. Jede Aufgabe lebt auf einem isolierten Branch. Klassisches Trunk-Based-Verhalten.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">[ai]</div>
+        <h4>pi &amp; opencode</h4>
+        <p>Unterstützt <code style="font-family:var(--mono);">pi Coding Agent</code> und <code style="font-family:var(--mono);">OpenCode</code> als KI-Backends. Modell pro Agent konfigurierbar.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">[tmux]</div>
+        <h4>Live-Monitoring</h4>
+        <p>Alle Agenten in einer tmux-Session, jeder mit eigener Farbe. Sofort sichtbar, wer gerade was tut — oder wo es klemmt.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">[local]</div>
+        <h4>Läuft lokal</h4>
+        <p>Code und Repository bleiben auf deinem Rechner. Was rausgeht, sind die KI-Calls an dein gewähltes Backend — auf Wunsch auch lokale Modelle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Für wen</div>
+    <div class="target">
+      <h3>Gebaut für einen Solo-Entwickler<br>an einem Rechner.</h3>
+      <p>coder ersetzt kein Team und nicht dein Urteil. Es übernimmt einen Teil der mechanischen Arbeit — Boilerplate, Features und Bugfixes, repetitive Tasks — damit mehr Zeit für Architektur und Produktentscheidungen bleibt.</p>
+      <ul>
+        <li>Freelancer mit wachsendem Backlog</li>
+        <li>Indie-Hacker mit zehn Side-Projects gleichzeitig</li>
+        <li>Senior-Devs, die KI nicht nur fürs Autocomplete wollen</li>
+        <li>Jeder, der Agentic Coding ernsthaft testen will, ohne ein Framework zu lernen, das morgen wieder weg ist</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2>Wahrscheinliche <em>Fragen</em>.</h2>
+
+    <div style="margin-top: 40px;">
+      <div class="faq-item">
+        <div class="faq-q">Mergt am Ende eine KI in main?</div>
+        <div class="faq-a">In der Standard-Session nicht. Coder arbeitet ausschließlich auf Feature-Branches, Reviewer ist read-only. Den Merge nach <code style="font-family:var(--mono);color:var(--text);">main</code> machst du selbst — oder du nutzt den optionalen Merger-Loop, der approvte Branches automatisch übernimmt.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Warum gibt es die Software nicht zum Download?</div>
+        <div class="faq-a">Weil das eigentliche Know-how nicht im Tool steckt, sondern in der <code style="font-family:var(--mono);color:var(--text);">AGENTS.md</code>. Sie definiert, wie die vier Agenten dein Projekt verstehen — und schlecht geschrieben produziert sie keinen optimalen Code. Ich gebe coder deshalb nur in Verbindung mit der Schulung weiter, damit die Konfiguration zu deinem Projekt passt. Danach kannst du es zeitlich unbegrenzt nutzen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Welche KI-Modelle werden unterstützt?</div>
+        <div class="faq-a">coder läuft auf <code style="font-family:var(--mono);color:var(--text);">pi Coding Agent</code> oder <code style="font-family:var(--mono);color:var(--text);">OpenCode</code>. Pro Agent konfigurierbar — der Planner kann ein anderes Modell nutzen als der Coder.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Funktioniert das mit jedem Stack?</div>
+        <div class="faq-a">Solange Build und Tests per Shell-Befehl ausführbar sind, ja. Getestet mit Node, Typescript, Angular, Swift und Python. coder ist nicht an eine Sprache gebunden, aber die <code style="font-family:var(--mono);color:var(--text);">AGENTS.md</code> muss zum jeweiligen Stack passen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Was passiert, wenn der Reviewer einen Branch ablehnt?</div>
+        <div class="faq-a">Der Plan geht zurück an den Planner mit Feedback, oder du greifst manuell ein. Du entscheidest, wie oft eine Schleife laufen darf, bevor menschliche Aufmerksamkeit nötig wird.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Brauche ich tmux?</div>
+        <div class="faq-a">Empfohlen für die Live-View, aber nicht zwingend. Du kannst die Agenten auch nach Bedarf individuell starten.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beratung" class="final-cta">
+  <div class="container">
+    <div class="section-label">Das Angebot</div>
+    <h2>Software inklusive.<br>Bezahlt wird die <em>Schulung</em>.</h2>
+    <p>coder gibt es nicht als Download zum Selbstausprobieren. Der Grund: ohne sauber konfigurierte <code style="color:var(--accent);background:var(--accent-soft);padding:2px 6px;border-radius:3px;font-size:0.9em;">AGENTS.md</code> produziert die Pipeline keinen optimalen Code. Deshalb gibt es das Tool nur zusammen mit der Schulung, in der wir die Konfiguration für dein Projekt gemeinsam aufsetzen. Empfohlen wird ein Anthropic Konto mit API Key, ein Github Copilot Abo und/oder ein OpenCode (Go) Abo.</p>
+
+    <div class="package-card">
+      <div class="package-header">
+        <div class="package-label">Komplettpaket</div>
+        <div class="package-price-block">
+          <div class="package-price">auf Anfrage</div>
+          <div class="package-price-note">ab 490 € netto / je nach Umfang der Session</div>
+        </div>
+      </div>
+      <div class="package-body">
+        <p class="package-desc">Eine Remote-Session, in der wir die Funktionsweise an deinem echten Projekt durchgehen und gemeinsam deine <code style="font-family:var(--mono);color:var(--text);background:var(--accent-soft);padding:2px 6px;border-radius:3px;font-size:0.9em;">AGENTS.md</code> aufsetzen. Im Anschluss erhältst du die Software und kannst sie zeitlich unbegrenzt nutzen.</p>
+
+        <div class="package-columns">
+          <div class="package-col">
+            <div class="package-col-title">Schulung</div>
+            <ul class="pricing-list">
+              <li>Funktionsweise der Pipeline im Detail</li>
+              <li>Aufbau und Struktur der <code style="font-family:var(--mono);color:var(--text);">AGENTS.md / CLAUDE.md</code></li>
+              <li>Konfiguration für deinen Stack &amp; deine Konventionen</li>
+              <li>Erste echte Task gemeinsam durchlaufen</li>
+              <li>Best Practices &amp; typische Stolperfallen</li>
+            </ul>
+          </div>
+          <div class="package-col">
+            <div class="package-col-title">Software</div>
+            <ul class="pricing-list">
+              <li>Alle vier Agenten, alle Features</li>
+              <li>Zeitlich unbegrenzte Nutzung</li>
+              <li>Anpassung und Weiterentwicklung erlaubt</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-row" style="justify-content:center; margin-top:48px;">
+      <a href="mailto:mail@oliver-kiessler.de?subject=coder%20%E2%80%93%20Schulung%20anfragen" class="btn btn-primary">
+        <span>Schulung anfragen</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+    <div><a href="https://oliver-kiessler.de" style="margin-left:0;">Oliver Kießler</a></div>
+    <div>
+      <a href="mailto:mail@oliver-kiessler.de">Kontakt</a>
+      <a href="https://oliver-kiessler.de/de/impressum.html">Impressum</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section, .terminal').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
