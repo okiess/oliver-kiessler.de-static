@@ -6,6 +6,6 @@ Instagram: okiess
 Location: Cologne, Germany
 
 /* SITE */
-Last update: 2026/07/04
+Last update: 2026/07/18
 Standards: HTML5, CSS3
-Software: VS Code, Claude Code
+Software: VS Code, Claude Code, OpenCode, Pi
