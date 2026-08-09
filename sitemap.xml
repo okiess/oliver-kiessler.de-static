@@ -13,6 +13,10 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://oliver-kiessler.de/links/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://oliver-kiessler.de/cv/cv_okiess_de.pdf</loc>
     <priority>1.0</priority>
   </url>
