@@ -1,11 +1,11 @@
 /* TEAM */
 Your title: Oliver Kießler
 Site: https://oliver-kiessler.de
-Twitter: @okiess
+Bluesky: okiessler.bsky.social
 Instagram: okiess
 Location: Cologne, Germany
 
 /* SITE */
-Last update: 2026/07/18
+Last update: 2026/11/21
 Standards: HTML5, CSS3
 Software: VS Code, Claude Code, OpenCode, Pi
